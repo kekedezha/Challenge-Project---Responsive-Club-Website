@@ -1,0 +1,573 @@
+/* Universal Styles */
+html {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 16px;
+}
+
+.main-content {
+    position: relative;
+    top: 8rem; /*To offset for fixed header. */
+    overflow: auto;
+    background-color: #29524A;
+}
+
+/* Header */
+header {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    grid-template: 5.9375rem / 30% 40% 30%;
+    padding: 1rem 0;
+    background-color: #29524A;
+    border-bottom: solid 1px gray;
+    z-index: 5;
+}
+
+header .left-links {
+    grid-column: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo-header {
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right-links{
+    grid-column: 3 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-decoration: underline;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header .left-links nav li {
+    padding-right: 3.5rem;
+}
+header .right-links nav li {
+    padding-left: 3.5rem;
+}
+
+header nav li a {
+    font-size: 1.75rem;
+    color: white
+}
+
+.left-links nav a:hover {
+    color: black;
+}
+
+.desktop a:hover {
+    color: black;
+}
+
+@media only screen and (max-width: 1411px) {
+    header .logo {
+        text-align: center;
+    }
+
+    header {
+        padding: 1rem 0 2.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    header .logo {
+        font-size: 3.5rem;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    header nav li a {
+        font-size: 1.25rem;
+    }
+    header .left-links nav li {
+        padding-right: 2.5rem;
+    }
+    header .right-links nav li {
+        padding-left: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 783px) {
+    header .logo {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 671px) {
+    header .logo {
+        font-size: 2.5rem;
+    }
+    .header {
+        padding: 1rem 0 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header nav li a {
+        font-size: 1.20rem;
+    }
+    header .left-links nav li {
+        padding-right: 1.5rem;
+    }
+    header .right-links nav li {
+        padding-left: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    header .left-links, header .right-links {
+        display: none;
+    }
+}
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .about-welcome {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 19rem;
+    padding-bottom: 1rem;
+    background-image: url("../images/jonathan-borba-BlDivIHgBkA-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-content: end;
+}
+
+#about .about-description {
+    background-color: #29524A;
+}
+
+#about h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline overline white;
+}
+
+#about h3 {
+    color: white;
+    font-size: 2.25rem;
+    text-align: center;
+    line-height: 1.2;
+    padding: 2rem 15rem 1.5rem 15rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #about h3 {
+        padding: 4rem 5rem 1.5rem 5rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    #about h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        line-height: 1.5;
+        text-decoration: underline white;
+    }
+
+    #about h3 {
+        color: white;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 1.2;
+        padding: 1rem 5rem 1.5rem 5rem;
+    }
+}
+
+/* Events Section */
+#events {
+    height: 44rem;
+    padding: 10rem 8rem 1rem 5rem; 
+}
+
+#events .event-info {
+    float: left;
+}
+
+#events .events-image-container {
+    float: right;
+}
+#events img {
+    width: 25rem;
+    height: 37.5rem;
+}
+
+#events h2 {
+    padding-left: 6rem;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color: white;
+}
+
+#events .event-info ul {
+    padding-top: 4rem;
+    padding-left: 6rem;
+    line-height: 1.3;
+    font-size: 1.75rem;
+}
+
+#events .event-info ul li {
+    list-style:disc;
+    color: white;
+}
+
+#events .event-info ul p {
+    padding-left: 2rem;
+}
+
+#events .event-info ul a {
+    padding-left: 2rem;
+    color: white;
+}
+
+#events .event-info ul li a:hover {
+    color: blue;
+}
+
+@media only screen and (max-width: 768px) {
+    #events {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 10rem 0rem 5rem 0rem;
+    }
+
+    #events h2 {
+        font-size: 2.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #events .event-info ul p {
+        padding-left: 1rem;
+    }
+    
+    #events .event-info ul a {
+        padding-left: 1rem;
+        color: white;
+        font-size: 1rem;
+    }
+
+    #events .event-info ul {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        line-height: 1.3;
+    }
+    
+    #events .event-info {
+        padding-bottom: 2rem;
+    }
+    #events .events-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    #events img {
+        width: 50%;
+        height: 37.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    #events {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 5rem 0rem;
+    }
+
+    #events h2 {
+        font-size: 2.5rem;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #events .event-info ul p {
+        padding-left: 1rem;
+    }
+    
+    #events .event-info ul a {
+        padding-left: 1rem;
+        color: white;
+        font-size: 1rem;
+    }
+
+    #events .event-info ul {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        line-height: 1.3;
+    }
+    
+    #events .event-info {
+        padding-bottom: 2rem;
+    }
+    #events .events-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    #events img {
+        width: 80%;
+        height: 32.5rem;
+    }
+}
+
+/* Meeting Section */
+#meetings {
+    height: 40rem;
+    padding: 10rem 5rem 1rem 8rem;
+}
+#meetings .meetings-image-container
+{
+    float: left;
+}
+
+#meetings .meetings-info {
+    float: right;
+}
+
+#meetings h2 {
+    padding-right: 6rem;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    color:white;
+}
+
+#meetings .meetings-info ul {
+    padding-top: 4rem;
+    line-height: 1.3;
+    font-size: 1.75rem;
+}
+
+#meetings img {
+    width: 25rem;
+    height: 37.5rem;
+}
+
+#meetings .meetings-info ul li {
+    list-style:disc;
+    color: white;
+}
+
+#meetings .meetings-info ul p {
+    padding-left: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    #meetings {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 10rem 0rem 5rem 0rem;
+    }
+
+    #meetings h2 {
+        font-size: 2.5rem;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    #meetings .meetings-info ul p {
+        padding-left: 1rem;
+    }
+    
+    #meetings .meetings-info ul a {
+        padding-left: 1rem;
+        color: white;
+        font-size: 1rem;
+    }
+
+    #meetings .meetings-info ul {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        line-height: 1.3;
+    }
+    
+    #meetings .meetings-info {
+        padding-bottom: 2rem;
+    }
+    #meetings .meetings-image-container {
+        display: flex;
+        justify-content: center;
+    }
+    #meetings img {
+        width: 50%;
+        height: 37.5rem;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) {
+    #meetings {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 2rem 0rem;
+    }
+
+    #meetings h2 {
+        font-size: 2.5rem;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    #meetings .meetings-info ul {
+        padding-top: 2rem;
+        padding-left: 3rem;
+        line-height: 1.3;
+    }
+
+    #meetings .meetings-info ul p {
+        padding-left: 1rem;
+    }
+
+    #meetings .meetings-info {
+        padding-bottom: 2rem;
+    }
+
+    #meetings .meetings-image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #meetings img {
+        width: 80%;
+        height: 32.5rem;
+    }
+}
+
+/* Photos Section */
+#photos {
+    display: grid;
+    width: 95%;
+    position: relative;
+    padding: 4rem 0rem;
+    margin:auto;
+    grid-template: repeat(20,50px) / repeat(10, 1fr);
+}
+
+#photos .photo1 {
+    grid-area: 1 / 1 / 7 / 5;
+}
+
+#photos .photo1  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo2 {
+    grid-area: 9 / 1 / 21 / 4;
+    z-index: 2;
+}
+
+#photos .photo2  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo3 {
+    grid-area: 1 / 8 / 10 / 11;
+}
+
+#photos .photo3  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo4 {
+    grid-area: 7 / 3 / 16 / 8;
+    z-index: 1;
+}
+
+#photos .photo4  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo5 {
+    grid-area: 11 / 8 / 21 / 11;
+    z-index: 0;
+}
+
+#photos .photo5  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo6 {
+    grid-area: 16 / 5 / 21 / 7;
+}
+
+#photos .photo6  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#photos .photo7 {
+    grid-area: 2 / 5 / 6 / 8;
+}
+
+#photos .photo7  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Footer */
+footer {  
+    background-color: #030308;
+    font-size: 0.75rem;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-align: center; /*Text-align used because of footer being in 'block' display.*/
+    vertical-align: middle;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: blue;
+}
